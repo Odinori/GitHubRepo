@@ -1,4 +1,10 @@
+import javax.swing.*;
 
-public class FrontEnd {
+import java.awt.*;
+import java.awt.event.*;
+
+public class FrontEnd 
+{
+	//nate
 
 }
