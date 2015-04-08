@@ -1,8 +1,51 @@
 import java.util.*;
-  
-public class Encoder {
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.List;
+
+public class Encoder 
+{
+	private String filename;
+	private FileWriter fileWriter;
+	private FileReader fileReader;
    
-   public static void main(String[] args) {
+   public Encoder(String filename)
+   {
+	   //STEPS
+	   //1. Create a FileWriter (which creates a file in the process)
+	   //2. Create a FileReader (which can read from a file)
+	   
+	   try
+	   {
+		   fileWriter = new FileWriter(filename);
+	   }
+	   catch (IOException e)
+	   {
+		   // TODO Display Catch exception
+	   }
+	   try
+	   {
+		  fileReader = new FileReader(filename);
+	   }
+	   catch(FileNotFoundException e)
+	   {
+		   // TODO Display Catch Exception
+	   }
+	   
+   }
+   public void write(String plaintext)
+   {
+	   
+   }
+   
+   public List<String> read()
+   {
+	   return null;
+   }
+	
+	/*public static void main(String[] args) {
       String message;  // Line of text entered by user.
       Scanner sc = new Scanner(System.in);
       System.out.println("Enter the message: ");
