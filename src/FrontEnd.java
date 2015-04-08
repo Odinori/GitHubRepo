@@ -34,19 +34,39 @@ public class FrontEnd
 		usernameField.setFont(font);
 		username.add(usernameField);
 		
+		JButton save = new JButton("find username");
+		JButton load = new JButton("enter message");
+		username.add(save);
+		
 		leftBox.add(username);
 		leftBox.add(Box.createVerticalStrut(275));
+		leftBox.add(username.createGlue());
+		leftBox.remove(Box.createVerticalStrut(275));
 		
 		Box messagei = Box.createHorizontalBox();
 		final JTextField messagething = new JTextField();
 		messagething.setFont(font);
 		messagei.add(messagething);
+		messagei.add(load);
 		
 		leftBox.add(messagei);
 		
 		
 		//right box
-		Box message = Box.createHorizontalBox();
+		final JTextPane defPane = new JTextPane();
+		JScrollPane scrollPane = new JScrollPane(defPane);
+		rightBox.add(scrollPane);
+		
+		defPane.setEditable(false);		
+		scrollPane.setPreferredSize(new Dimension(300, 150));
+		
+		Box addDefBox = Box.createHorizontalBox();
+		rightBox.add(addDefBox);
+				
+		Box wordDefBox = Box.createVerticalBox();
+		
+		
+		addDefBox.add(wordDefBox);
 		
 		
 		frame.pack();
