@@ -1,3 +1,6 @@
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.util.*;
 
 public class BackEnd {
@@ -6,10 +9,10 @@ public class BackEnd {
 
 	HashMap<String, List<String>> messages;
 
-	public BackEnd() {
+	public BackEnd() throws FileNotFoundException, UnsupportedEncodingException, IOException {
 		this.messages = new HashMap<String, List<String>>();
 		
-		List<String> rawMsg = this.enc.read();
+		ArrayList<String> rawMsg = this.enc.Read();
 		
 		if(rawMsg != null) {
 			for(String msg : rawMsg) {
@@ -31,7 +34,7 @@ public class BackEnd {
 		return this.messages.get(username);
 	}
 	
-	public void addMessage(String username, String msg) {
+	public void addMessage(String username, String msg) throws FileNotFoundException, UnsupportedEncodingException, IOException {
 		if(this.messages.containsKey(username)) {
 			this.messages.get(username).add(msg);
 		} else {
@@ -43,7 +46,7 @@ public class BackEnd {
 		this.save();
 	}
 
-	public void removeMessage(String username, String msg) {
+	public void removeMessage(String username, String msg) throws FileNotFoundException, UnsupportedEncodingException, IOException {
 		this.messages.get(username).remove(msg);
 
 		if(this.messages.get(username).isEmpty()) {
@@ -77,9 +80,9 @@ public class BackEnd {
 		return s;
 	}
 
-	private void save() {
+	private void save() throws FileNotFoundException, UnsupportedEncodingException, IOException {
 		String s = convertToString();
-		this.enc.write(s);
+		this.enc.Write(s);
 	}
 }
 /*import java.io.File;
@@ -127,3 +130,4 @@ public class BackEnd
 	}
 	
 }
+*/
