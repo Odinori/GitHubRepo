@@ -4,12 +4,16 @@ import java.util.ArrayList;
 import java.util.List;
 import java.awt.*;
 import java.awt.event.*;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 
 public class FrontEnd 
 {
 	//nate
 	public List<String> Usernamelist = new ArrayList();
 	public List<String> Messagelist = new ArrayList();
+	public BackEnd BackEnd = new BackEnd();
 	
 	public FrontEnd()
 	{
@@ -78,6 +82,7 @@ public class FrontEnd
 			public void actionPerformed(ActionEvent e) 
 			{
 				String cheese = "";
+				
 				String word = usernameField.getText();
 				if(word.equals(""))
 				{
@@ -127,7 +132,18 @@ public class FrontEnd
 				String x = messagething.getText();
 				Usernamelist.add(s);
 				Messagelist.add(x);
-				BackEnd.addMessage(usernameField.getText(), messagething.getText());
+				try {
+					BackEnd.addMessage(usernameField.getText(), messagething.getText());
+				} catch (FileNotFoundException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				} catch (UnsupportedEncodingException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 			
 				
 			}
