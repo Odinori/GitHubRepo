@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import java.util.*;
 
 public class BackEnd {
@@ -84,10 +85,16 @@ public class BackEnd {
 }
 /*import java.io.File;
  
+=======
+<<<<<<< HEAD
+import java.io.File;
+>>>>>>> origin/master
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.PrintWriter;
+=======
+>>>>>>> origin/master
 import java.util.ArrayList;
 import java.util.List;
 
@@ -95,37 +102,35 @@ import java.util.List;
 public class BackEnd 
 {
 	
-	public ArrayList<String> users = new ArrayList<String>();
-	
 	//jackson
 	public static List<String> getMessages(String username)
 	{
+<<<<<<< HEAD
 		List<String> messages = new ArrayList<String>();
 		File file = new File(username);
 		try 
 		{
 			FileReader fileReader = new FileReader(file);
-			fileReader.
 		} 
 		catch (FileNotFoundException e) {}
-	
+		
 		
 		return messages;
-
+=======
+		
+		return null;
+>>>>>>> origin/master
 	}
 	
 	public static void addMessage(String username, String msg)
 	{
-		
+		Encoder encoder(username);
+		encoder.write(msg);
 	}
 
 	public List<String> getUsers()
 	{
-		ArrayList<String > list = new ArrayList<>();
-		for(int i = 0; i < list.size(); i++)
-			list.get(i).toString();
 		return null;
 	}
 	
 }
-*/
