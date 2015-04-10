@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.PrintWriter;
+=======
+>>>>>>> origin/master
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,9 +14,9 @@ public class BackEnd
 {
 	
 	//jackson
-	
-	public List<String> getMessages(String username)
+	public static List<String> getMessages(String username)
 	{
+<<<<<<< HEAD
 		List<String> messages = new ArrayList<String>();
 		File file = new File(username);
 		try 
@@ -24,6 +27,10 @@ public class BackEnd
 		
 		
 		return messages;
+=======
+		
+		return null;
+>>>>>>> origin/master
 	}
 	
 	public void addMessage(String username, String msg)
