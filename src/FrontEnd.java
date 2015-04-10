@@ -121,7 +121,7 @@ public class FrontEnd
 					return;
 				}
 				
-				
+				defPane.setText(defPane.getText() + "\n" + usernameField.getText() + ":       " + messagething.getText());
 			
 				
 			
