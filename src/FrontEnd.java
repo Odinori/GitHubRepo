@@ -8,8 +8,8 @@ import java.awt.event.*;
 public class FrontEnd 
 {
 	//nate
-	public List<String> Usernamelist;
-	public List<String> Messagelist;
+	public List<String> Usernamelist = new ArrayList();
+	public List<String> Messagelist = new ArrayList();
 	
 	public FrontEnd()
 	{
@@ -122,8 +122,11 @@ public class FrontEnd
 				}
 				
 				defPane.setText(defPane.getText() + "\n" + usernameField.getText() + ":    " + messagething.getText());
-				Usernamelist.add(usernameField.getText());
-				Messagelist.add(messagething.getText());
+				
+				String s = usernameField.getText();
+				String x = messagething.getText();
+				Usernamelist.add(s);
+				Messagelist.add(x);
 				BackEnd.addMessage(usernameField.getText(), messagething.getText());
 			
 				
