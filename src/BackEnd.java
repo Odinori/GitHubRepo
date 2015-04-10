@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import java.util.*;
 
 public class BackEnd {
@@ -85,10 +84,7 @@ public class BackEnd {
 }
 /*import java.io.File;
  
-=======
-<<<<<<< HEAD
 import java.io.File;
->>>>>>> origin/master
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -105,7 +101,6 @@ public class BackEnd
 	//jackson
 	public static List<String> getMessages(String username)
 	{
-<<<<<<< HEAD
 		List<String> messages = new ArrayList<String>();
 		File file = new File(username);
 		try 
@@ -116,10 +111,8 @@ public class BackEnd
 		
 		
 		return messages;
-=======
-		
-		return null;
->>>>>>> origin/master
+
+	return null;
 	}
 	
 	public static void addMessage(String username, String msg)
