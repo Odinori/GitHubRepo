@@ -33,7 +33,7 @@ public class BackEnd
 >>>>>>> origin/master
 	}
 	
-	public void addMessage(String username, String msg)
+	public static void addMessage(String username, String msg)
 	{
 		Encoder encoder(username);
 		encoder.write(msg);

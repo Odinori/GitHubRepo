@@ -121,9 +121,10 @@ public class FrontEnd
 					return;
 				}
 				
-				defPane.setText(defPane.getText() + "\n" + usernameField.getText() + ":       " + messagething.getText());
-			
-				
+				defPane.setText(defPane.getText() + "\n" + usernameField.getText() + ":    " + messagething.getText());
+				Usernamelist.add(usernameField.getText());
+				Messagelist.add(messagething.getText());
+				BackEnd.addMessage(usernameField.getText(), messagething.getText());
 			
 				
 			}
