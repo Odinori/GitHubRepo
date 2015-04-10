@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -5,9 +6,9 @@ public class BackEnd
 {
 	
 	//jackson
-	
-	public List<String> getMessages(String username)
+	public static List<String> getMessages(String username)
 	{
+		
 		return null;
 	}
 	
